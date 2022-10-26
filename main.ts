@@ -2,9 +2,12 @@ import { Serie } from "./serie";
 
 import { dataSeries } from './data';
 
-let tablaSeries = document.getElementById("id_series")!;
+let tablaSeries = document.getElementById("idSeries")!;
 let tablaPromedio = document.getElementById("promedio")!;
 
+console.log(dataSeries);
+mostrarDatos(dataSeries);
+promTempSeries(dataSeries);
 
 function mostrarDatos(series: Serie[]): void {
     let seriesTbody: HTMLElement = document.createElement("tbody");
