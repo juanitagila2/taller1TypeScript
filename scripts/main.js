@@ -1,4 +1,4 @@
-import { dataSeries } from './data';
+import { dataSeries } from "./data.js";
 var tablaSeries = document.getElementById("idSeries");
 var tablaPromedio = document.getElementById("promedio");
 console.log(dataSeries);
@@ -8,7 +8,7 @@ function mostrarDatos(series) {
     var seriesTbody = document.createElement("tbody");
     series.forEach(function (Serie) {
         var trElement = document.createElement("tr");
-        trElement.innerHTML = "<td>".concat(Serie.numero, "</td>\n                                <td>").concat(Serie.nombre, "</td>\n                                <td>").concat(Serie.canal, "</td>\n                                <td>").concat(Serie.temporadas, "</td>\n                                <td>").concat(Serie.resumen, "</td>\n                                <td>").concat(Serie.linkCanal, "</td>\n                                <td>").concat(Serie.imagen, "</td>");
+        trElement.innerHTML = "<th scope=\"row\">".concat(Serie.numero, "</th>\n                                <td>").concat(Serie.nombre, "</td>\n                                <td>").concat(Serie.canal, "</td>\n                                <td>").concat(Serie.temporadas, "</td>");
         seriesTbody.appendChild(trElement);
     });
     tablaSeries.appendChild(seriesTbody);

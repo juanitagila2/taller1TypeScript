@@ -1,6 +1,5 @@
-import { Serie } from "./serie";
-
-import { dataSeries } from './data';
+import { Serie } from "./serie.js";
+import { dataSeries } from "./data.js";
 
 let tablaSeries = document.getElementById("idSeries")!;
 let tablaPromedio = document.getElementById("promedio")!;
@@ -13,13 +12,10 @@ function mostrarDatos(series: Serie[]): void {
     let seriesTbody: HTMLElement = document.createElement("tbody");
     series.forEach(Serie => {
         let trElement = document.createElement("tr");
-        trElement.innerHTML = `<td>${Serie.numero}</td>
+        trElement.innerHTML = `<th scope="row">${Serie.numero}</th>
                                 <td>${Serie.nombre}</td>
                                 <td>${Serie.canal}</td>
-                                <td>${Serie.temporadas}</td>
-                                <td>${Serie.resumen}</td>
-                                <td>${Serie.linkCanal}</td>
-                                <td>${Serie.imagen}</td>`;
+                                <td>${Serie.temporadas}</td>`;
         seriesTbody.appendChild(trElement);
   });
   tablaSeries.appendChild(seriesTbody);

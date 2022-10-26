@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top 5 Series</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script type="module" src="./scripts/main.js"> </script>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col">
                 <h1>Top series</h1>
-                <table class="table">
-                    <thead class="thead-black" id="idSeries">
+                <table class="table table-striped" id="idSeries">
+                    <thead >
                         <tr>
-                            <th>#</th>
-                            <th>Imagen</th>
-                            <th>Nombre</th>
-                            <th>Canal</th>
-                            <th>Temporadas</th>
-                            <th>Resumen</th>
-                            <th>Link para verla</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Canal</th>
+                            <th scope="col">Temporadas</th>
                         </tr>
                     </thead>
                 </table>
@@ -28,8 +26,5 @@
             </div>
         </div>
     </div>
-    <script type="module" src="./scripts/serie.js"> </script>
-    <script type="module" src="./scripts/data.js"> </script>
-    <script type="module" src="./scripts/main.js"> </script>
 </body>
 </html>
